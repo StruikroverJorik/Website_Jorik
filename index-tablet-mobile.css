@@ -1,0 +1,89 @@
+/* START OPMAAK TABLET-------------------------------------------------- */
+@media (max-width: 1200px) {
+
+ /*-- START OPMAAK HOME SECTION --*/
+
+  .slideshow li:nth-child(1) span {
+    background-position: 20% 0%;
+  }
+
+  .slideshow li:nth-child(2) span {
+    background-position: 50% 0%;
+  }
+
+  .slideshow li:nth-child(3) span {
+    background-position: 45% 0%;
+  }
+
+  .slideshow li:nth-child(4) span {
+    background-position: 30% 0%;
+  }
+
+  .slideshow li:nth-child(5) span {
+    background-position: 40% 0%;
+  }
+
+  #home h1 {
+    margin-top: 500px;
+}
+
+.navbar a {
+  margin-left: 20px !important;
+}
+
+.header .logo {
+   font-size: 22px;
+}
+
+
+
+  /*-- EINDE  OPMAAK HOME SECTION  --*/
+}
+
+/* EINDE OPMAAK TABLET-------------------------------------------------- */
+
+
+
+/* START OPMAAK MOBIEL-------------------------------------------------- */
+/*-- START OPMAAK HOME SECTION --*/
+@media (max-width: 800px) {
+
+
+  .slideshow li:nth-child(1) span {
+    background-position: 50% 0%;
+  }
+
+  .slideshow li:nth-child(2) span {
+    background-position: 50% 0%;
+  }
+
+  .slideshow li:nth-child(3) span {
+    background-position: 45% 0%;
+  }
+
+  .slideshow li:nth-child(4) span {
+    background-position: 50% 0%;
+  }
+
+  .slideshow li:nth-child(5) span {
+    background-position: 85% 0%;
+  }
+
+  #home h1 {
+    font-size: 26px;
+    margin-top: 500px;
+  }
+
+  #home p {
+    font-size: 15px;
+
+  }
+
+
+
+  /*-- EINDE  OPMAAK HOME SECTION  --*/
+}
+
+/* EINDE OPMAAK MOBIEL-------------------------------------------------- */
+
+
