@@ -1,5 +1,3 @@
-// START SCRIPT HEADER MENU -----------------------------------------------
-
 document.onscroll = () => {
     if (window.scrollY > 0) {
       document.querySelector('.header').classList.add('active');
@@ -37,5 +35,3 @@ document.onload = () => {
     document.querySelector('.header').classList.remove('active');
   }
 };
-
-// EIND SCRIPT HEADER MENU -----------------------------------------------
