@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Jorik</title>
+
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
@@ -14,7 +15,6 @@
     <link rel="stylesheet" href="index.css" />
 
     <!--https://struikroverjorik.github.io/Website_Jorik/-->
-
 
 </head>
 
@@ -26,9 +26,9 @@
         <nav class="navbar">
             <a href="#">home</a>
             <a href="#about">Video</a>
-            <a href="#services">Gallery</a>
+            <a href="#services">Cards</a>
             <a href="#works">Countries</a>
-            <a href="#contact"></a>
+            <a href="#contact">Gallery</a>
         </nav>
     </header>
     <!------------------EINDE HEADER------------------>
@@ -68,134 +68,106 @@
     </section>
     <!------------------EINDE GALLERIJ------------------>
 
-    <!-- works section starts -->
-    <section class="works" id="works">
-      <!--START CONTAINER 3--------------------------------------------------------->
-      <div class="home-page-container-4" id="section04">
-        <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-            <button class="btn" onclick="filterSelection('europa')"> europa</button>
-            <button class="btn" onclick="filterSelection('noord-amerika')">noord-amerika</button>
-            <button class="btn" onclick="filterSelection('zuid-amerika')">zuid-amerika</button>
-            <button class="btn" onclick="filterSelection('afrika')"> afrika</button>
-            <button class="btn" onclick="filterSelection('azie')"> azië</button>
-        </div>
 
-        <div class="container">
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/Nederland.jpg" alt="">
-                <span>nederland</span>
-            </div>
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/België.jpg" alt="">
+
+    <!--START COUNTRIES--------------------------------------------------------->
+    <section class="works" id="works">
+
+        <div class="container-countries">
+            <div class="box"><a href="/belgie.html"><img src="images/sub-menu Europa/België.jpg" alt=""></a>
                 <span>België</span>
             </div>
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/duitsland.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Europa/duitsland.jpg" alt="">
                 <span>Duitsland</span>
             </div>
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/Frankrijk.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Europa/Frankrijk.jpg" alt="">
                 <span>Frankrijk</span>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/Spanje.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Europa/Spanje.jpg" alt="">
                 <span>Spanje</span>
             </div>
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/England.jpg" alt="">
+        </div>
+
+        <div class="container-countries">
+            <div class="box"><img src="images/sub-menu Europa/England.jpg" alt="">
                 <span>London</span>
             </div>
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/Polen.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Europa/Polen.jpg" alt="">
                 <span>Polen</span>
             </div>
-            <div class="filterDiv europa box"><img src="images/sub-menu Europa/Hongarije.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Europa/Hongarije.jpg" alt="">
                 <span>Hongarije</span>
+            </div>
+            <div class="box"><img src="images/sub-menu Europa/IJsland.JPG" alt="">
+                <span>IJsland</span>
             </div>
         </div>
 
-        <div class="container">
-            <div class="filterDiv noord-amerika box"><img src="images/sub-menu Noord Amerika/West Canada.jpg" alt="">
+        <div class="container-countries">
+            <div class="box"><img src="images/sub-menu Noord Amerika/West Canada.jpg" alt="">
                 <span>West Canada</span>
             </div>
-            <div class="filterDiv noord-amerika box"><img src="images/sub-menu Noord Amerika/Oost Canada.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Noord Amerika/Oost Canada.jpg" alt="">
                 <span>Oost Canada</span>
             </div>
-            <div class="filterDiv noord-amerika box"><img src="images/sub-menu Noord Amerika/West Amerika.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Noord Amerika/West Amerika.jpg" alt="">
                 <span>West Amerika</span>
             </div>
-            <div class="filterDiv noord-amerika box"><img src="images/sub-menu Noord Amerika/Oost Amerika.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Noord Amerika/Oost Amerika.jpg" alt="">
                 <span>Oost Amerika</span>
             </div>
         </div>
 
-        <div class="container">
-            <div class="filterDiv zuid-amerika box"><img src="images/sub-menu-Zuid Amerika/Costa Rica.jpg" alt="">
+        <div class="container-countries">
+            <div class="box"><img src="images/sub-menu-Zuid Amerika/Costa Rica.jpg" alt="">
                 <span>Costa Rica</span>
             </div>
-            <div class="filterDiv zuid-amerika box"><img src="images/sub-menu-Zuid Amerika/Ecuador.jpg" alt="">
+            <div class="box"><img src="images/sub-menu-Zuid Amerika/Ecuador.jpg" alt="">
                 <span>Ecuador</span>
             </div>
-
-
-            <div class="filterDiv afrika box"><img src="images/sub-menu Afrika/Marokko.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Afrika/Marokko.jpg" alt="">
                 <span>Marokko</span>
             </div>
-            <div class="filterDiv afrika box"><img src="images/sub-menu Afrika/Swaziland.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Afrika/Swaziland.jpg" alt="">
                 <span>Swaziland</span>
             </div>
         </div>
 
-        <div class="container">
-            <div class="filterDiv afrika box"><img src="images/sub-menu Afrika/Zuid Afrika.jpg" alt="">
+        <div class="container-countries">
+            <div class="box"><img src="images/sub-menu Afrika/Zuid Afrika.jpg" alt="">
                 <span>Zuid Afrika</span>
             </div>
-            <div class="filterDiv azie box"><img src="images/sub-menu Azië/Sri Lanka.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Azië/Sri Lanka.jpg" alt="">
                 <span>Sri Lanka</span>
             </div>
-            <div class="filterDiv azie box"><img src="images/sub-menu Azië/Kirgizië.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Azië/Kirgizië.jpg" alt="">
                 <span>Kirgizië</span>
             </div>
-            <div class="filterDiv azie box"><img src="images/sub-menu Azië/China.jpg" alt="">
+            <div class="box"><img src="images/sub-menu Azië/China.jpg" alt="">
                 <span>China</span>
             </div>
         </div>
 
 
-
-
-
-
-
-
-
-
-    </div>
-    <!--EIND CONTAINER 3--------------------------------------------------------->
-
+        </div>
     </section>
-    <!-- works section ends -->
+    <!--EIND COUNTRIES--------------------------------------------------------->
+
 
     <!-- contact section starts -->
     <section class="contact" id="contact">
-        <h1 class="heading">contact us</h1>
-        <div class="box-container">
-            <div class="box">
-                <h3>address</h3>
-                <p>Sydney, Australia 100 Mainstreet Center</p>
-                <h3>email</h3>
-                <p>simpleemail@gmail.com</p>
-                <h3>phone</h3>
-                <p>+91 123456789</p>
-                <h3>fax</h3>
-                <p>(121) 219 2121</p>
-            </div>
-            <form>
-                <div class="inputBox">
-                    <input type="text" placeholder="your name" />
-                    <input type="text" placeholder="your number" />
-                </div>
-                <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="send message" class="btn" />
-            </form>
-        </div>
+        <section class="services" id="services">
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src="" draggable="false" />
+                <img class="image" src="" draggable="false" />
+                <img class="image" src="/Gallery-images/wit.jpg" draggable="false" />
+                <img class="image" src="/Gallery-images/Oost Canada.jpg" draggable="false" />
+                <img class="image" src="/Gallery-images/West Amerika.jpg" draggable="false" />
+                <img class="image" src="/Gallery-images/West Canada.jpg" draggable="false" />
+                <img class="image" src="/Gallery-images/Costa Rica.jpg" draggable="false" />
+                <img class="image" src="/Gallery-images/Ecuador.jpg" draggable="false" />
+              </div>
+                    </section>
     </section>
     <!-- contact section ends -->
 
