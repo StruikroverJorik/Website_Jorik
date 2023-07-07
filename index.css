@@ -134,7 +134,6 @@ section {
   font-weight: 700;
   color: var(--white);
   z-index: 1;
-  margin-top: 580px;
 }
 
 .home p {
@@ -142,6 +141,7 @@ section {
   font-weight: 700;
   color: var(--white);
   z-index: 1;
+  margin-top: 10px;
 }
 
 
@@ -361,7 +361,7 @@ section {
 }
 
 .box:hover {
-  flex: 1 1 50%;
+  flex: 1 1 40%;
   cursor: pointer;
 }
 
@@ -374,22 +374,62 @@ section {
 
 /* contact */
 
-#image-track {
-  display: flex;
-  gap: 40px ;
-  left: 50%;
-  top: 50%;
-  user-select: none; /* -- Prevent image highlighting -- */
-  cursor: pointer;
-  
+.hello {
+  opacity: 1 !important;
 }
 
-#image-track > .image {
-  width: 71.5vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: 100% center;
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
+
+.full .content {
+  background-color: rgba(0,0,0,0.75) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 8px;
+}
+
+.gallery img {
+  max-width: 100%;
+
+}
+.gallery .content {
+  padding: 0px;
+}
+
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+
 /* contact */
 
 /* footer */
@@ -744,31 +784,30 @@ section {
 /* EIND OPMAAK MOBIEL LIGGEND--------------------------------------------- */
 
 
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
 
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
 
+@keyframes zoomin {
+  0% {
+opacity: 0;
+  }
 
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries */
+/* START OPMAAK HAMBURGER MENU--------------------------------------------- */
 @media (max-width: 1200px) {
   .header {
     padding: 2rem;
@@ -824,9 +863,6 @@ section {
   html {
     font-size: 55%;
   }
-
-
-
-
-
 }
+
+/* EIND OPMAAK HAMBURGER MENU--------------------------------------------- */

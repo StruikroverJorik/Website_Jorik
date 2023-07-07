@@ -54,56 +54,42 @@ function myFunction() {
 // EIND SCRIPT VIDEO HOMEPAGE
 
 
-// START SCRIPT CARD SLIDERS
-const track = document.getElementById("image-track");
 
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+// START SCRIPT CARD GALLERIJ
+var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
 
-const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";  
-  track.dataset.prevPercentage = track.dataset.percentage;
-}
-
-const handleOnMove = e => {
-  if(track.dataset.mouseDownAt === "0") return;
-  
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-        maxDelta = window.innerWidth / 2;
-  
-  const percentage = (mouseDelta / maxDelta) * -100,
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-  
-  track.dataset.percentage = nextPercentage;
-  
-  track.animate({
-    transform: `translate(${nextPercentage}%, 0%)`
-  }, { duration: 1200, fill: "forwards" });
-  
-  for(const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
-  }
-}
-
-/* -- Had to add extra lines for touch events -- */
-
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
-// EIND SCRIPT VIDEO HOMEPAGE
-
-
-
+// EIND SCRIPT CARD GALLERIJ
 
 
 
